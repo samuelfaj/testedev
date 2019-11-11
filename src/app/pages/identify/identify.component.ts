@@ -36,7 +36,7 @@ export class IdentifyComponent extends DefaultBase{
     const api = this.api.set('error', false).set('exception', false);
     const response = await api.get('validate/document/', {document: this.field});
 
-    if(response.error){
+    if(response.result.success){
       // Já tem login
       self.app.router.navigate(['/login'], { queryParams: { login: self.field} })
     }else{

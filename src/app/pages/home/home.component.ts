@@ -30,5 +30,6 @@ export class HomeComponent extends DefaultBase {
 
     self.items = response.data.response.data;
     self.pages = Array(response.data.response.last_page).fill(4);
+    window.scrollTo(0, 0)
   }
 }
