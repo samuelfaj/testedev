@@ -1,0 +1,22 @@
+<div class="container" style="padding-top: 20%">
+	<form #form="ngForm" (submit)="submit()">
+		<div class="text-center pb-4">
+			<img src="assets/images/icone_groovy.png" style="width: 100px;margin-left: auto;margin-right: auto">
+		</div>
+
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="CNPJ ou Email" required name="login" [(ngModel)]="login.login" disabled>
+		</div>
+
+		<div class="form-group">
+			<input type="password" class="form-control" placeholder="Senha" required name="password" [(ngModel)]="login.password">
+		</div>
+
+		<div class="form-group">
+			<button [disabled]="form.form.invalid" type="submit" class="btn btn-primary btn-block">Entrar</button>
+		</div>
+		<div class="form-group text-right">
+			<a href="javascript:void(0)">Esqueceu sua senha?</a>
+		</div>
+	</form>
+</div>
